@@ -10,5 +10,7 @@
   },
   "scripts": {
     "dev": "babel ./main.js -o ./bundle.js -w"
-  }
+  },
+  "repository": "https://github.com/FeZer-1999/classes-example.git",
+  "author": "Felipe Z Saldanha <fzsaldanha@hotmail.com>"
 }
