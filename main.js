@@ -1,63 +1,32 @@
-class Pessoa {
-  constructor(nome, altura, peso) {
-    this.nome = nome;
-    this.altura = altura;
-    this.peso = peso;
-  }
-}
+const arr = [1, 2, 3, 4, 5, 6];
 
-class Vingador extends Pessoa {
-  constructor(
-    nome,
-    altura,
-    peso,
-    poderes,
-    temArmadura,
-    temArma,
-    isMembroFundador,
-    isImortal
-  ) {
-    super(nome, altura, peso);
-    this.poderes = poderes;
-    this.temArmadura = temArmadura;
-    this.temArma = temArma;
-    this.isMembroFundador = isMembroFundador;
-    this.isImortal = isImortal;
-  }
+// devolve um novo Array como resultado.
+const squareArr = arr.map(function(item) {
+  return item * item;     
+});
 
-  thorlutar() {
-    alert(`${this.nome} está lutando usando ${this.poderes[1]}`);
-  }
-  ironmanlutar() {
-    alert(`${this.nome} está lutando usando sua armadura`);
-  }
-}
+console.log(squareArr);
 
-const thor = new Vingador(
-  "Thor",
-  "1.85",
-  "100kg",
-  ["Deus do Trovão", "Super força", "Vôo", "Longevidade"],
-  true,
-  true,
-  true,
-  false
-);
+// atribui o valor de retorno ao acumulador.
+const sum = arr.reduce(function(total, next) {
+  return total + next;
+});
 
-const ironman = new Vingador(
-  "Iron Man",
-  "1.77",
-  "80kg",
-  ["Sem poderes"],
-  true,
-  true,
-  true,
-  false
-);
+console.log(sum);
 
-document.getElementById("thorlutar").onclick = function () {
-  thor.thorlutar();
-};
-document.getElementById("ironManlutar").onclick = function () {
-  ironman.ironmanlutar();
-};
+// retorna os numeros pares ou ímpares do array
+const filter = arr.filter(function(item) {
+  return item % 2 === 0;
+});
+
+console.log(filter);
+
+// verificar se existe uma certa info no array
+const find = arr.find(function(item) {
+  return item === 4;
+});
+
+console.log(find);
+
+
+
